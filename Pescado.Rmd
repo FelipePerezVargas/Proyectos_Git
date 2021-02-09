@@ -1,0 +1,56 @@
+---
+title: "Operaciones Matriciales"
+author: "Felipe Pérez Vargas"
+date: "30/1/2021"
+output: html_document
+---
+
+
+Diagrama de pescado
+
+```{r}
+# Instalamos el paquete 
+# install.packages('SixSigma')
+# Invocamos la librery
+library(SixSigma)
+
+# Especificamos el problema o efecto a analizar
+efecto <- "Retraso"
+
+# Creamos el vector de áreas a analizar 
+grupo <- c("Personal", "Clima", "Insumos", "Planeación")
+
+# Create a vector that contains the causes
+causas <- c(vector(mode = "list", length = length(grupo)))
+
+# Create lists corresponding to the causes for each corresponding group
+causas[1] <- list(c("Entranamiento", "Inadecuado"))
+causas[2] <- list(c("Lluvia", "Temperatura", "Viento"))
+causas[3] <- list(c("Materiales", "Retrasos", "Reprocesos"))
+causas[4] <- list(c("Clientes", "Permisos", "Erores"))
+
+# Create the cause-and-effect diagram
+ss.ceDiag(efecto,
+          grupo,
+          causas,
+          main = "Diagrama Causa-Efecto",
+          sub = "Se ve perron o no?", ss.col=c(rep('red', 4)))
+
+
+
+```
+
+Definición matemática de rendimiento 
+
+
+
+
+
+
+
+
+
+
+
+
+
